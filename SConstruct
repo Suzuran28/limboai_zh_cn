@@ -61,6 +61,7 @@ vars = Variables()
 vars.AddVariables(
     BoolVariable("deploy_manifest", help="Deploy limboai.gdextension into PROJECT/addons/limboai/bin", default=True),
     BoolVariable("deploy_icons", help="Deploy icons into PROJECT/addons/limboai/icons", default=True),
+    BoolVariable("deploy_translations", help="Deploy editor UI translations into PROJECT/addons/limboai/translations", default=True),
 )
 env = Environment(tools=["default"], PLATFORM="", variables=vars)
 Help(vars.GenerateHelpText(env))
@@ -68,6 +69,7 @@ Help(vars.GenerateHelpText(env))
 # Read LimboAI-specific variables.
 deploy_manifest = env["deploy_manifest"]
 deploy_icons = env["deploy_icons"]
+deploy_translations = env["deploy_translations"]
 
 # Remove processed variables from ARGUMENTS to avoid godot-cpp warnings.
 for o in vars.options:
@@ -121,9 +123,29 @@ sources += Glob("gdextension/*.cpp")
 sources += Glob("hsm/*.cpp")
 sources += Glob("util/*.cpp")
 
+# Localization: build bilingual (English + Chinese) class reference when translations exist.
+doc_source_dir = "doc_classes"
+zh_doc_json = "i18n/docs/docs_zh.json"
+if os.path.exists(zh_doc_json) and os.path.exists("i18n/tools/build_doc_classes.py"):
+    print("Generating bilingual documentation classes...")
+    subprocess.run(
+        [
+            sys.executable,
+            "i18n/tools/build_doc_classes.py",
+            "--json",
+            zh_doc_json,
+            "--src",
+            "doc_classes",
+            "--out",
+            "gen/doc_classes_zh",
+        ],
+        check=True,
+    )
+    doc_source_dir = "gen/doc_classes_zh"
+
 # Generate documentation header.
 if env["target"] in ["editor", "template_debug"]:
-    doc_data = env.GodotCPPDocData("gen/doc_data.gen.cpp", source=Glob("doc_classes/*.xml"))
+    doc_data = env.GodotCPPDocData("gen/doc_data.gen.cpp", source=Glob(doc_source_dir + "/*.xml"))
     sources.append(doc_data)
 
 # Build library.
@@ -160,3 +182,12 @@ if deploy_manifest:
         Copy("$TARGET", "$SOURCE"),
     )
     Default(cmd_deploy_manifest)
+
+# Deploy editor UI translations into PROJECT/addons/limboai/translations.
+if deploy_translations:
+    cmd_deploy_translations = env.Command(
+        project_dir + "/addons/limboai/translations/",
+        "i18n/ui/",
+        Copy("$TARGET", "$SOURCE"),
+    )
+    Default(cmd_deploy_translations)

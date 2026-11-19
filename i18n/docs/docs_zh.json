@@ -1,0 +1,756 @@
+{
+  "_meta": {
+    "language": "zh_CN",
+    "comment": "Chinese translations for doc_classes/*.xml. English originals live in doc_classes/."
+  },
+  "BBAabb": {
+    "brief": "用于 [BehaviorTree] 任务的 AABB 类型参数。请参阅 [BBParam]。"
+  },
+  "BBArray": {
+    "brief": "用于 [BehaviorTree] 任务的 Array 类型参数。请参阅 [BBParam]。"
+  },
+  "BBBasis": {
+    "brief": "用于 [BehaviorTree] 任务的 Basis 类型参数。请参阅 [BBParam]。"
+  },
+  "BBBool": {
+    "brief": "用于 [BehaviorTree] 任务的 Bool 类型参数。请参阅 [BBParam]。"
+  },
+  "BBByteArray": {
+    "brief": "用于 [BehaviorTree] 任务的 ByteArray 类型参数。请参阅 [BBParam]。"
+  },
+  "BBColor": {
+    "brief": "用于 [BehaviorTree] 任务的 Color 类型参数。请参阅 [BBParam]。"
+  },
+  "BBColorArray": {
+    "brief": "用于 [BehaviorTree] 任务的 ColorArray 类型参数。请参阅 [BBParam]。"
+  },
+  "BBDictionary": {
+    "brief": "用于 [BehaviorTree] 任务的 Dictionary 类型参数。请参阅 [BBParam]。"
+  },
+  "BBFloat": {
+    "brief": "用于 [BehaviorTree] 任务的 Float 类型参数。请参阅 [BBParam]。"
+  },
+  "BBFloat32Array": {
+    "brief": "用于 [BehaviorTree] 任务的 PackedFloat32Array 类型参数。请参阅 [BBParam]。"
+  },
+  "BBFloat64Array": {
+    "brief": "用于 [BehaviorTree] 任务的 PackedFloat64Array 类型参数。请参阅 [BBParam]。"
+  },
+  "BBInt": {
+    "brief": "用于 [BehaviorTree] 任务的 Integer 类型参数。请参阅 [BBParam]。"
+  },
+  "BBInt32Array": {
+    "brief": "用于 [BehaviorTree] 任务的 PackedInt32Array 类型参数。请参阅 [BBParam]。"
+  },
+  "BBInt64Array": {
+    "brief": "用于 [BehaviorTree] 任务的 PackedInt64Array 类型参数。请参阅 [BBParam]。"
+  },
+  "BBNode": {
+    "brief": "用于 [BehaviorTree] 任务的节点类型参数。参见 [BBParam]。",
+    "desc": "用于 [BehaviorTree] 任务的节点类型参数。参见 [BBParam]。\n如果来源是黑板变量，则允许任何继承自 [Object] 的类型。\n创建新的 [BBNode] 并通过来源设置它时，会使用目标节点在树中的路径，例如：\n[codeblock]\n# Example: set a BTPlayAnimation task to point at a specific AnimationPlayer\nvar bbnode: BBNode = BBNode.new()\n\n# Set it directly via the node in question\nbbnode.saved_value = $AnimationPlayer\n# Or use a NodePath()\nbbnode.saved_value = NodePath($AnimationPlayer.get_path())\n\nbt_play_animation.animation_player = bbnode\n[/codeblock]"
+  },
+  "BBParam": {
+    "brief": "LimboAI 类型化参数的基类。",
+    "desc": "LimboAI 类型化参数的基类，能够引用 [Blackboard] 变量或持有特定 [enum Variant.Type] 的原始值。\n[b]注意[/b]：不要实例化。请改用特定的子类型。",
+    "methods": {
+      "get_type": "返回该参数的预期数据类型。",
+      "get_value": "返回该参数的值。"
+    },
+    "members": {
+      "saved_value": "当 [member value_source] 设置为 [constant SAVED_VALUE] 时，存储参数值。值的数据类型由 [method get_type] 决定。",
+      "value_source": "指定 BBParam 值的来源。请参阅 [enum ValueSource]。",
+      "variable": "当 [member value_source] 设置为 [constant BLACKBOARD_VAR] 时，存储 [Blackboard] 变量的名称。"
+    },
+    "constants": {
+      "SAVED_VALUE": "值直接存储在 BBParam 资源内部。",
+      "BLACKBOARD_VAR": "值通过变量名引用，并从 [Blackboard] 获取。变量名存储在 BBParam 资源内部。"
+    }
+  },
+  "BBPlane": {
+    "brief": "用于 [BehaviorTree] 任务的 Plane 类型参数。请参阅 [BBParam]。"
+  },
+  "BBProjection": {
+    "brief": "用于 [BehaviorTree] 任务的 Projection 类型参数。请参阅 [BBParam]。"
+  },
+  "BBQuaternion": {
+    "brief": "用于 [BehaviorTree] 任务的 Quaternion 类型参数。请参阅 [BBParam]。"
+  },
+  "BBRect2": {
+    "brief": "用于 [BehaviorTree] 任务的 Rect2 类型参数。请参阅 [BBParam]。"
+  },
+  "BBRect2i": {
+    "brief": "用于 [BehaviorTree] 任务的 Rect2i 类型参数。请参阅 [BBParam]。"
+  },
+  "BBString": {
+    "brief": "用于 [BehaviorTree] 任务的 String 类型参数。请参阅 [BBParam]。"
+  },
+  "BBStringArray": {
+    "brief": "用于 [BehaviorTree] 任务的 StringArray 类型参数。请参阅 [BBParam]。"
+  },
+  "BBStringName": {
+    "brief": "用于 [BehaviorTree] 任务的 StringName 类型参数。请参阅 [BBParam]。"
+  },
+  "BBTransform2D": {
+    "brief": "用于 [BehaviorTree] 任务的 Transform2D 类型参数。请参阅 [BBParam]。"
+  },
+  "BBTransform3D": {
+    "brief": "用于 [BehaviorTree] 任务的 Transform3D 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVariant": {
+    "brief": "用于 [BehaviorTree] 任务的 Variant 类型参数。请参阅 [BBParam]。",
+    "desc": "用于 [BehaviorTree] 任务的 Variant 类型参数。请参阅 [BBParam]。\n数据类型由 [member type] 指定。",
+    "members": {
+      "type": "为该参数值指定的 [enum Variant.Type]。"
+    }
+  },
+  "BBVector2": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector2 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVector2Array": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector2Array 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVector2i": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector2i 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVector3": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector3 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVector3Array": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector3Array 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVector3i": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector3i 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVector4": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector4 类型参数。请参阅 [BBParam]。"
+  },
+  "BBVector4i": {
+    "brief": "用于 [BehaviorTree] 任务的 Vector4i 类型参数。请参阅 [BBParam]。"
+  },
+  "BT": {
+    "brief": "[BTTask] 的基类。",
+    "constants": {
+      "FRESH": "任务尚未执行，或者已被中止并重置。",
+      "RUNNING": "任务正在执行，尚未完成。",
+      "FAILURE": "任务以失败结束。",
+      "SUCCESS": "任务以成功结束。"
+    }
+  },
+  "BTAction": {
+    "brief": "所有 [BehaviorTree] 动作的基类。",
+    "desc": "所有 [BehaviorTree] 动作的基类。你可以通过扩展 [BTAction] 类来创建自己的动作。\n表示 [BehaviorTree] 中代理应执行的特定行为或动作。动作是 [BehaviorTree] 层次结构中的最低层级，负责执行达成目标所需的实际工作。动作没有子任务。\n单个动作可以在一个或多个 tick 内完成一项任务。如果完成任务需要超过一个 tick，该动作应返回 [code]RUNNING[/code] 状态。任务完成后，动作会返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code] 以表示结果。"
+  },
+  "BTAlwaysFail": {
+    "brief": "将 [code]SUCCESS[/code] 转换为 [code]FAILURE[/code] 的 BT 装饰器。"
+  },
+  "BTAlwaysSucceed": {
+    "brief": "将 [code]FAILURE[/code] 转换为 [code]SUCCESS[/code] 的 BT 装饰器。"
+  },
+  "BTAwaitAnimation": {
+    "brief": "等待动画播放完成的 BT 动作。",
+    "desc": "BTAwaitAnimation 动作会等待指定 [AnimationPlayer] 节点上的动画播放完成，并返回 [code]SUCCESS[/code]。\n如果指定的动画已播放完成，或指定的动画当前未在播放，则返回 [code]SUCCESS[/code]。\n如果指定的动画不存在，或该动作无法获取 [AnimationPlayer] 节点，则返回 [code]FAILURE[/code]。",
+    "members": {
+      "animation_name": "[AnimationPlayer] 节点中动画的键名。",
+      "animation_player": "指定 [AnimationPlayer] 节点的参数。",
+      "max_time": "等待动画完成的最长时间（以秒为单位）。如果动画未在此时间内完成，BTAwaitAnimation 将停止等待并返回 [code]SUCCESS[/code]。"
+    }
+  },
+  "BTCallMethod": {
+    "brief": "在指定 [Node] 或 [Object] 上调用方法的 BT 动作。",
+    "desc": "BTCallMethod 动作会在指定的 [Node] 或 [Object] 实例上调用 [member method]，并返回 [code]SUCCESS[/code]。\n如果动作在方法执行期间遇到问题，则返回 [code]FAILURE[/code]。",
+    "members": {
+      "args": "调用方法时要传递的参数。",
+      "args_include_delta": "将 delta 作为第一个参数包含在内，并移动其余参数（如果有）的位置。",
+      "method": "要调用的方法的名称。",
+      "node": "指定包含要调用方法的 [Node] 或 [Object] 实例。",
+      "result_var": "如果非空，则将方法调用的结果赋值给此属性指定的黑板变量。"
+    }
+  },
+  "BTCheckAgentProperty": {
+    "brief": "检查代理属性值的 BT 条件。",
+    "desc": "BTCheckAgentProperty 检查代理的属性值，并将其与 [member value] 进行比较。\n根据 [member check_type] 返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code]。",
+    "members": {
+      "check_type": "要执行的检查类型。",
+      "property": "指定要比较的代理属性的参数。",
+      "value": "指定用于与代理属性进行比较的值的参数。"
+    }
+  },
+  "BTCheckTrigger": {
+    "brief": "检查触发器（布尔变量）的 BT 条件。",
+    "desc": "[BTCheckTrigger] 验证 [member variable] 是否设置为 [code]true[/code]。如果是，该任务会将其切换为 [code]false[/code] 并返回 [code]SUCCESS[/code]。否则，它返回 [code]FAILURE[/code]。\n[BTCheckTrigger] 可以在 [BTSequence] 中充当“门”：当触发变量设置为 [code]true[/code] 时，它允许执行后续任务，然后将该变量改为 [code]false[/code]。",
+    "members": {
+      "variable": "黑板上用作触发器的布尔变量。另请参阅 [member BTTask.blackboard]。\n如果变量的值为 [code]true[/code]，[BTCheckTrigger] 会将其切换为 [code]false[/code] 并返回 [code]SUCCESS[/code]。\n如果变量的值为 [code]false[/code]，[BTCheckTrigger] 会返回 [code]FAILURE[/code]。"
+    }
+  },
+  "BTCheckVar": {
+    "brief": "检查黑板上变量的 BT 条件。",
+    "desc": "BTCheckVar 将 [member variable] 与 [member value] 进行比较，并根据 [member check_type] 返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code]。",
+    "members": {
+      "check_type": "要执行的检查类型。",
+      "value": "指定用于与 [member variable] 进行比较的值的参数。",
+      "variable": "要检查其值的变量名称。"
+    }
+  },
+  "BTComment": {
+    "brief": "BTComment 为 [BehaviorTree] 添加注释或说明。",
+    "desc": "BTComment 用于为 [BehaviorTree] 添加注释或说明。\n注释不会作为树的一部分执行，并会从 [BehaviorTree] 的运行时实例中移除。"
+  },
+  "BTComposite": {
+    "brief": "BT 组合任务的基类。",
+    "desc": "所有 [BehaviorTree] 组合任务的基类。你可以通过扩展 BTComposite 类来创建自己的组合任务。\n组合是 [BehaviorTree] 中包含一个或多个子任务的控制任务。它通过指定子任务的执行方式，定义 [BehaviorTree] 的结构和流程。组合可用于将相关任务分组为一个单元，从而更轻松地管理和维护 [BehaviorTree]。[BehaviorTree] 组合的示例包括 [BTSelector]、[BTSequence] 和 [BTParallel]。"
+  },
+  "BTCondition": {
+    "brief": "BT 条件的基类。",
+    "desc": "所有 [BehaviorTree] 条件的基类。你可以通过扩展 [BTCondition] 类来创建自己的条件。\n条件是 [BehaviorTree] 中的一种任务，它在执行后续任务之前检查特定的条件。它常用于组合任务内部，以控制执行流程。条件可用于验证环境状态、检查是否存在敌人，或评估代理的生命值状态。在 [BehaviorTree] 中使用条件任务可以提高系统效率并避免不必要的动作。不过，它们可能不适用于复杂的决策过程，过多的条件任务会使 [BehaviorTree] 难以阅读。\n条件通常不需要多个 tick 就能完成，而是立即返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code]。",
+    "methods": {},
+    "members": {},
+    "constants": {},
+    "signals": {}
+  },
+  "BTConsolePrint": {
+    "brief": "向控制台输出文本的 BT 动作任务。",
+    "desc": "BTConsolePrint 动作向控制台输出文本并返回 [code]SUCCESS[/code]。它可以包含格式化参数占位符，类似于 GDScript 的 % 运算符。",
+    "members": {
+      "bb_format_parameters": "格式参数的值将作为要打印文本的格式参数使用。",
+      "text": "要打印的文本，可包含多个占位符，它们会被格式参数替换。这些占位符遵循与 GDScript 的 % 运算符相同的格式，通常以 '%' 开头，后跟格式说明符。例如：%s 表示字符串，%d 表示整数，%f 表示实数。"
+    }
+  },
+  "BTCooldown": {
+    "brief": "仅当距离上一次执行已过去 [member duration] 时间时，才执行其子任务的 BT 装饰器。",
+    "desc": "BTCooldown 仅当距离上一次成功执行子任务已过去 [member duration] 时间时，才运行其子任务。除非将 [member trigger_on_failure] 设置为 [code]true[/code]，否则只会考虑成功的执行。\n如果子任务返回 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。\n如果子任务返回 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]，并启动冷却计时器。\n如果子任务返回 [code]FAILURE[/code]，或距离上一次执行尚未过去 [member duration] 时间，则返回 [code]FAILURE[/code]。",
+    "members": {
+      "cooldown_state_var": "用于在 [Blackboard] 中存储冷却状态的布尔变量。如果留空，该变量将被自动生成并分配。\n如果变量的值设置为 [code]true[/code]，则表示冷却已激活。此功能可用于从树的其他部分检查冷却状态，或在 [BehaviorTree] 的不同部分之间共享它。",
+      "duration": "允许下一次子任务执行前需要等待的时间。",
+      "process_pause": "如果为 [code]true[/code]，则在 [SceneTree] 暂停时也会处理冷却。",
+      "start_cooled": "如果为 [code]true[/code]，则如同子任务在第一次 BT tick 之前已执行过一样开始冷却。",
+      "trigger_on_failure": "如果为 [code]true[/code]，则当子任务返回 [code]FAILURE[/code] 时也会激活冷却。否则，仅当子任务返回 [code]SUCCESS[/code] 时才会触发冷却。"
+    }
+  },
+  "BTDecorator": {
+    "brief": "BT 装饰器的基类。",
+    "desc": "所有 [BehaviorTree] 装饰器的基类。你可以通过扩展 BTDecorator 类来创建自己的装饰器。\n装饰器是 [BehaviorTree] 中用于改变其子任务行为的任务。装饰器只能有一个子任务。\n装饰器可用于为任务的执行添加条件、限制或其他约束。[BehaviorTree] 装饰器的示例包括 [BTInvert]、[BTRepeat] 和 [BTCooldown]。使用 [BehaviorTree] 装饰器可以为现有任务添加额外逻辑，从而简化复杂行为的设计和实现。"
+  },
+  "BTDelay": {
+    "brief": "在执行其子任务之前引入延迟的 BT 装饰器。",
+    "desc": "BTDelay 在执行其子任务之前引入由 [member seconds] 指定的延迟。在延迟期间返回 [code]RUNNING[/code]。",
+    "members": {
+      "seconds": "延迟时长，以秒为单位。"
+    }
+  },
+  "BTDynamicSelector": {
+    "brief": "每个 tick 都从头开始执行任务，直到首次返回 [code]SUCCESS[/code] 的 BT 组合任务。",
+    "desc": "BTDynamicSelector 按从第一个到最后一个的顺序执行其子任务，直到任一子任务返回 [code]SUCCESS[/code]。与 [BTSelector] 不同，它每个 tick 都会从头开始执行任务，并重新评估任务的状态。当你希望在每个 tick 中重试更高优先级的行为时，这非常有用。\n如果子任务结果为 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。BTDynamicSelector 会记住最后一个处于 [code]RUNNING[/code] 的子任务，但与 [BTSelector] 不同，在下一个执行 tick 中，它会重新执行之前的任务并重新评估它们的返回状态。如果之前任一任务的结果不是 [code]FAILURE[/code]，它将中止所记住的 [code]RUNNING[/code] 任务。\n如果所有子任务结果均为 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。\n如果子任务结果为 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。",
+    "methods": {},
+    "members": {},
+    "constants": {},
+    "signals": {}
+  },
+  "BTDynamicSequence": {
+    "brief": "只要子任务返回 [code]SUCCESS[/code]，每个 tick 都从头开始执行任务的 BT 组合任务。",
+    "desc": "BTDynamicSequence 按从第一个到最后一个的顺序执行其子任务，只要它们返回 [code]SUCCESS[/code]。与 [BTSequence] 不同，它每个 tick 都会从头开始执行任务，并重新评估任务的状态。当你希望在每次 tick 中重新检查长时间运行的动作之前的条件，并在任一条件结果为 [code]FAILURE[/code] 时中止该 [code]RUNNING[/code] 动作时，这非常有用。\n如果子任务结果为 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。BTDynamicSequence 会记住最后一个处于 [code]RUNNING[/code] 的子任务，但与 [BTSequence] 不同，在下一个执行 tick 中，它会重新执行之前的任务并重新评估它们的返回状态。如果之前任一任务的结果不是 [code]SUCCESS[/code]，它将中止所记住的 [code]RUNNING[/code] 任务。\n如果子任务结果为 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。\n如果所有子任务结果均为 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。",
+    "methods": {},
+    "members": {},
+    "constants": {},
+    "signals": {}
+  },
+  "BTEvaluateExpression": {
+    "brief": "在指定的 [Node] 或 [Object] 上求值 [Expression] 的 BT 动作。",
+    "desc": "BTEvaluateExpression 动作在指定的 [Node] 或 [Object] 实例上对 [member expression_string] 求值，并在 [Expression] 执行成功时返回 [code]SUCCESS[/code]。\n如果该动作在 [Expression] 解析或执行期间遇到问题，则返回 [code]FAILURE[/code]。",
+    "methods": {
+      "parse": "在考虑 [member input_include_delta] 和 [member input_names] 的情况下调用 [method Expression.parse]，并返回其错误码。"
+    },
+    "members": {
+      "expression_string": "要解析和执行的表达式字符串。\n[b]警告：[/b]更新 [member expression_string] 后请调用 [method parse] 以更新内部的 [Expression]，因为它不会自动更新。",
+      "input_include_delta": "如果启用，输入变量 [code]delta[/code] 将被添加到 [member input_names] 和 [member input_values] 中。\n[b]警告：[/b]切换 [member input_include_delta] 后请调用 [method parse] 以更新内部的 [Expression]，因为它不会自动更新。",
+      "input_names": "[member expression_string] 中的变量名称列表，用户将通过 [member input_values] 为这些变量提供值。\n[b]警告：[/b]更新 [member input_names] 后请调用 [method parse] 以更新内部的 [Expression]，因为它不会自动更新。",
+      "input_values": "为 [member input_names] 中指定的变量提供的值列表。这些值通过其在数组中的索引映射到变量。",
+      "node": "指定要在其上调用方法的 [Node] 或 [Object] 实例。",
+      "result_var": "如果非空，则将方法调用的结果赋值给由该属性指定的黑板变量。"
+    }
+  },
+  "BTFail": {
+    "brief": "始终返回 [code]FAILURE[/code] 的 BT 动作。"
+  },
+  "BTForEach": {
+    "brief": "对 [Array] 的每个元素执行其子任务的 BT 装饰器。",
+    "desc": "BTForEach 会对 [Array] 的每个元素执行其子任务。在每次迭代期间，下一个元素会被存储到指定的 [Blackboard] 变量中。\n如果子任务返回 [code]RUNNING[/code]，或子任务在非最后一次迭代中返回 [code]SUCCESS[/code]，则返回 [code]RUNNING[/code]。\n如果子任务返回 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。\n如果子任务在最后一次迭代中返回 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。",
+    "members": {
+      "array_var": "持有 [Array] 的 [Blackboard] 变量，用于迭代过程。",
+      "save_var": "用于存储 [member array_var] 所引用数组中元素的 [Blackboard] 变量。"
+    }
+  },
+  "BTInstance": {
+    "brief": "表示 [BehaviorTree] 资源的运行时实例。",
+    "desc": "可使用 [method BehaviorTree.instantiate] 方法创建。",
+    "methods": {
+      "get_agent": "返回该行为树实例的代理。",
+      "get_blackboard": "返回该行为树实例的黑板。",
+      "get_last_status": "返回最后一次更新的执行状态。",
+      "get_owner_node": "返回拥有该行为树实例的场景 [Node]。",
+      "get_root_task": "返回该行为树实例的根任务。",
+      "get_source_bt_path": "返回用于创建该实例的行为树资源的文件路径。",
+      "is_instance_valid": "如果该行为树实例已正确初始化并可使用，则返回 [code]true[/code]。",
+      "register_with_debugger": "将该行为树实例注册到调试器。",
+      "unregister_with_debugger": "从调试器注销该行为树实例。通常不需要这样做，因为调试器会在实例被释放时自动注销它。",
+      "update": "对该行为树实例执行 tick，并返回其状态。"
+    },
+    "members": {
+      "monitor_performance": "如果为 [code]true[/code]，则在编辑器的 “Debugger->Monitors” 中为该实例添加性能监视器。"
+    },
+    "constants": {},
+    "signals": {
+      "freed": "当该行为树实例被释放时发出。调试器用它来注销实例。",
+      "updated": "当该行为树实例完成更新时发出。"
+    }
+  },
+  "BTInvert": {
+    "brief": "将 [code]FAILURE[/code] 转换为 [code]SUCCESS[/code]、将 [code]SUCCESS[/code] 转换为 [code]FAILURE[/code] 的 BT 装饰器。",
+    "desc": "BTInvert 将 [code]FAILURE[/code] 转换为 [code]SUCCESS[/code]，将 [code]SUCCESS[/code] 转换为 [code]FAILURE[/code]。"
+  },
+  "BTNewScope": {
+    "brief": "创建新 [Blackboard] 作用域的 BT 装饰器。",
+    "desc": "BTNewScope 在初始化期间创建一个新的 [Blackboard] 作用域，并用数据填充它。请参阅 [Blackboard]。\n返回子任务执行的状态。",
+    "members": {
+      "blackboard_plan": "存储并管理将用于构建新 [Blackboard] 实例的变量。"
+    }
+  },
+  "BTParallel": {
+    "brief": "同时执行其所有子任务的行为树组合节点。",
+    "desc": "BTParallel 同时执行其所有子任务。请注意，BTParallel 并不涉及多线程。它会在同一个 tick 中按顺序（从第一个到最后一个）处理每个任务，然后返回结果。如果满足任一中止条件，任何当前处于 [code]RUNNING[/code] 状态的任务都将被终止，结果将是 [code]FAILURE[/code] 或 [code]SUCCESS[/code]。[member num_failures_required] 决定 BTParallel 何时失败，[member num_successes_required] 决定其何时成功。当两者都满足时，它优先考虑 [member num_failures_required]。\n如果设置了 [member repeat]，则所有子任务将在每个 tick 中重新执行，无论它们之前返回的是 [code]SUCCESS[/code] 还是 [code]FAILURE[/code]。\n当所需数量的子任务返回 [code]FAILURE[/code] 时，返回 [code]FAILURE[/code]。当 [member repeat] 设置为 [code]false[/code] 时，如果没有满足任何条件，且所有子任务都返回了 [code]SUCCESS[/code] 或 [code]FAILURE[/code]，则 BTParallel 将返回 [code]FAILURE[/code]。\n当所需数量的子任务返回 [code]SUCCESS[/code] 时，返回 [code]SUCCESS[/code]。\n如果没有满足任何条件，并且 [member repeat] 设置为 [code]true[/code] 或某个子任务返回了 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。",
+    "members": {
+      "num_failures_required": "如果指定数量的子任务返回 [code]FAILURE[/code]，BTParallel 也将返回 [code]FAILURE[/code]。",
+      "num_successes_required": "如果指定数量的子任务返回 [code]SUCCESS[/code]，BTParallel 也将返回 [code]SUCCESS[/code]。",
+      "repeat": "当为 [code]true[/code] 时，子任务将被再次执行，无论它们之前返回的是 [code]SUCCESS[/code] 还是 [code]FAILURE[/code]。\n当为 [code]false[/code] 时，如果没有满足任何条件，且所有子任务都返回了 [code]SUCCESS[/code] 或 [code]FAILURE[/code]，则 BTParallel 将返回 [code]FAILURE[/code]。"
+    }
+  },
+  "BTPauseAnimation": {
+    "brief": "暂停指定 [AnimationPlayer] 节点上动画播放的 BT 动作。",
+    "desc": "BTPauseAnimation 动作会暂停指定 [AnimationPlayer] 节点上的动画播放，并返回 [code]SUCCESS[/code]。\n如果无法获取 [AnimationPlayer] 节点，则返回 [code]FAILURE[/code]。",
+    "members": {
+      "animation_player": "指定 [AnimationPlayer] 节点的参数。"
+    }
+  },
+  "BTPlayAnimation": {
+    "brief": "在指定的 [AnimationPlayer] 节点上播放动画的 BT 动作。",
+    "desc": "BTPlayAnimation 动作在指定的 [AnimationPlayer] 节点上播放动画。如果 [member await_completion] 大于 [code]0[/code]，该动作将等待动画完成，最长等待时间等于 [member await_completion]。\n如果动画播放完毕，或经过的时间超过 [member await_completion]，则返回 [code]SUCCESS[/code]。当 [member await_completion] 设为 [code]0[/code] 时，BTPlayAnimation 不等待动画结束，而是立即返回 [code]SUCCESS[/code]。\n如果动画仍在播放且经过的时间小于 [member await_completion]，则返回 [code]RUNNING[/code]。\n如果该动作无法播放所请求的动画，则返回 [code]FAILURE[/code]。",
+    "methods": {},
+    "members": {
+      "animation_name": "动画在 [AnimationPlayer] 节点内的键。如果为空，且 [AnimationPlayer] 之前处于暂停状态，BTPlayAnimation 将恢复播放上次播放的动画。",
+      "animation_player": "用于指定 [AnimationPlayer] 节点的参数。",
+      "await_completion": "等待动画完成的最长持续时间（单位为秒）。如果动画未在此时间内结束，BTPlayAnimation 将停止等待并返回 [code]SUCCESS[/code]。",
+      "blend": "自定义混合时间（单位为秒）。请参阅 [method AnimationPlayer.play]。",
+      "from_end": "从末尾开始播放动画。与负的 [member speed] 结合使用可反向播放动画。请参阅 [method AnimationPlayer.play]。",
+      "speed": "自定义播放速度缩放比例。请参阅 [method AnimationPlayer.play]。"
+    },
+    "constants": {},
+    "signals": {}
+  },
+  "BTPlayer": {
+    "brief": "[BehaviorTree] 资源的播放器。",
+    "desc": "[BTPlayer] 节点用于在运行时实例化并播放 [BehaviorTree] 资源。在初始化期间，行为树实例会获得对代理、[member blackboard] 以及当前场景根的引用。代理可以通过 [member agent_node] 属性指定（默认是 BTPlayer 的父节点）。\n[member behavior_tree] 仅在 [member active] 为 [code]true[/code] 且代理的本地场景根节点就绪时才会初始化。如果 [BTPlayer] 在场景根节点就绪之前变为活动状态，则初始化会延迟到那时。当 [member active] 为 [code]false[/code] 时，初始化会推迟到激活时。\n有关行为树的介绍，请参阅 [BehaviorTree]。",
+    "methods": {
+      "get_bt_instance": "返回行为树实例。",
+      "restart": "重置行为树的执行。每个正在运行的任务都会被中止，下一次树执行将重新开始。此方法不会重置 [Blackboard]。",
+      "set_bt_instance": "设置要播放的 [BTInstance]。当你想在运行时切换到不同的行为树实例时，此方法很有用。另请参阅 [method BehaviorTree.instantiate]。",
+      "set_scene_root_hint": "设置将作为新实例化的行为树场景根的 [Node]。应在 [BTPlayer] 添加到场景树之前（[code]NOTIFICATION_READY[/code] 之前）调用。当从代码中动态创建 [BTPlayer] 节点时，这通常很有用。",
+      "update": "如果 [member active] 为 [code]true[/code]，则执行行为树实例的根任务。当 [member update_mode] 设置为 [constant MANUAL] 时，调用此方法。当 [member update_mode] 不是 [constant MANUAL] 时，[method update] 将被自动调用。请参阅 [enum UpdateMode]。"
+    },
+    "members": {
+      "active": "当为 [code]true[/code] 时，行为树会在更新期间执行。[BTPlayer] 会在首次变为活动状态时初始化其 [BehaviorTree] 实例，但仅在代理的本地场景根节点就绪之后。如果代理在根节点就绪之前变为活动状态，初始化会延迟到根节点就绪时。当为 [code]false[/code] 时，行为树不会执行，初始化会推迟到激活时。",
+      "agent_node": "将用作代理的节点路径。在实例化后设置它不会产生任何效果。",
+      "behavior_tree": "要在运行时实例化并执行的 [BehaviorTree] 资源。",
+      "blackboard": "保存行为树任务共享的数据。请参阅 [Blackboard]。\n[b]调试：[/b]在调试正在运行的项目时，此属性在远程检查器中可见。点击 [Blackboard] 引用，可以查看并编辑整个作用域链中的变量。",
+      "blackboard_plan": "存储并管理用于构造新 [Blackboard] 实例的变量。",
+      "monitor_performance": "如果为 [code]true[/code]，则为每个 [BTPlayer] 节点的实例在“调试器 -> 监视器”中添加一个性能监视器。",
+      "update_mode": "决定行为树何时执行。请参阅 [enum UpdateMode]。"
+    },
+    "constants": {
+      "IDLE": "在空闲处理期间执行行为树。",
+      "PHYSICS": "在物理处理期间执行行为树。",
+      "MANUAL": "通过调用 [method update] 手动执行行为树。"
+    },
+    "signals": {
+      "behavior_tree_finished": "当行为树完成执行并返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code] 时发出。\n[param status] 参数保存行为树返回的状态。请参阅 [enum BT.Status]。",
+      "updated": "当 BTPlayer 完成行为树更新时发出。\n[param status] 参数保存行为树返回的状态。请参阅 [enum BT.Status]。"
+    }
+  },
+  "BTProbability": {
+    "brief": "以给定概率执行其子任务的 BT 装饰器。",
+    "desc": "BTProbability 以由 [member run_chance] 定义的给定概率执行其子任务。\n如果子任务被执行，则返回其结果；否则返回 [code]FAILURE[/code]。",
+    "members": {
+      "run_chance": "定义子任务被执行可能性的概率。"
+    }
+  },
+  "BTProbabilitySelector": {
+    "brief": "根据各子任务所关联的概率选择执行哪个子任务的行为树组合节点。",
+    "desc": "BTProbabilitySelector 根据各子任务关联的概率选择要执行的子任务。它通常用于决策目的。概率分布根据分配给每个子任务的权重计算。\n当子任务返回 [code]SUCCESS[/code] 时，返回 [code]SUCCESS[/code]。\n当子任务返回 [code]RUNNING[/code] 时，返回 [code]RUNNING[/code]。\n当子任务返回 [code]FAILURE[/code] 时，BTProbabilitySelector 的行为取决于 [member abort_on_failure] 的值：\n- 如果 [member abort_on_failure] 为 [code]false[/code]，当子任务返回 [code]FAILURE[/code] 时，BTProbabilitySelector 会在剩余子任务上重新归一化概率分布，并选择新的子任务执行。如果所有子任务都失败，该组合节点将返回 [code]FAILURE[/code]。\n- 如果 [member abort_on_failure] 为 [code]true[/code]，当子任务返回 [code]FAILURE[/code] 时，BTProbabilitySelector 不会选择其他子任务执行，并会立即返回 [code]FAILURE[/code]。",
+    "methods": {
+      "get_probability": "返回子任务被选中的概率。",
+      "get_total_weight": "返回所有子任务的总权重。",
+      "get_weight": "返回子任务在加权概率选择算法中的权重。",
+      "has_probability": "返回索引为 [param child_idx] 的子任务是否参与加权概率选择算法并被分配了概率。对于 [BTComment] 任务返回 [code]false[/code]。",
+      "set_probability": "设置子任务的权重，该权重根据期望的概率计算得出。",
+      "set_weight": "设置子任务在加权概率选择算法中的权重。"
+    },
+    "members": {
+      "abort_on_failure": "如果为 [code]true[/code]，则当子任务返回 [code]FAILURE[/code] 时，BTProbabilitySelector 不会选择其他子任务执行，并会返回 [code]FAILURE[/code]。"
+    }
+  },
+  "BTRandomSelector": {
+    "brief": "以随机顺序执行任务，直到首次返回 [code]SUCCESS[/code] 的 BT 组合任务。",
+    "desc": "BTRandomSelector 以随机顺序执行其子任务，直到任一子任务返回 [code]SUCCESS[/code]。如果子任务结果为 [code]FAILURE[/code]，BTRandomSelector 会立即执行另一个子任务，直到其中某个返回 [code]SUCCESS[/code] 或所有子任务结果均为 [code]FAILURE[/code]。\n如果子任务结果为 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。BTRandomSelector 会记住执行顺序以及最后一个返回 [code]RUNNING[/code] 的子任务，以确保在下一个 tick 中从该处继续执行。\n如果所有子任务结果均为 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。\n如果子任务结果为 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。",
+    "methods": {},
+    "members": {},
+    "constants": {},
+    "signals": {}
+  },
+  "BTRandomSequence": {
+    "brief": "只要子任务返回 [code]SUCCESS[/code]，就以随机顺序执行任务的 BT 组合任务。",
+    "desc": "只要子任务返回 [code]SUCCESS[/code]，BTRandomSequence 就以随机顺序执行其子任务。如果子任务结果为 [code]SUCCESS[/code]，BTRandomSequence 会立即执行下一个子任务，直到其中某个返回 [code]FAILURE[/code] 或所有子任务结果均为 [code]SUCCESS[/code]。\n如果子任务结果为 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。BTRandomSequence 会记住执行顺序以及最后一个返回 [code]RUNNING[/code] 的子任务，以确保在下一个 tick 中从该处继续执行。\n如果子任务结果为 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。\n如果所有子任务结果均为 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。",
+    "methods": {},
+    "members": {},
+    "constants": {},
+    "signals": {}
+  },
+  "BTRandomWait": {
+    "brief": "等待一段随机时长后返回 [code]SUCCESS[/code] 的 BT 动作。",
+    "desc": "BTRandomWait 动作会等待一段随机时长，然后返回 [code]SUCCESS[/code]。该时长在 [member min_duration] 和 [member max_duration] 指定的范围内随机取值。",
+    "members": {
+      "max_duration": "等待的最大时长。",
+      "min_duration": "等待的最小时长。"
+    }
+  },
+  "BTRepeat": {
+    "brief": "按 [member times] 指定的次数重复其子任务的 BT 装饰器。",
+    "desc": "BTRepeat 按 [member times] 定义的次数重复执行其子任务。如果 [member forever] 为 [code]true[/code]，子任务的执行将无限重复。\n如果子任务结果为 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。如果 [member forever] 为 [code]true[/code]，BTRepeat 将始终返回 [code]RUNNING[/code]。\n如果达到指定的成功执行次数，则返回 [code]SUCCESS[/code]。如果 [member abort_on_failure] 为 [code]false[/code]，子任务返回的 [code]FAILURE[/code] 状态也会被视为一次成功执行。\n当 [member abort_on_failure] 为 [code]true[/code] 时，如果子任务结果为 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。",
+    "methods": {},
+    "members": {
+      "abort_on_failure": "如果为 [code]false[/code]，子任务返回的 [code]FAILURE[/code] 状态也会被视为一次成功执行。",
+      "forever": "如果为 [code]true[/code]，子任务的执行将无限重复，并始终返回 [code]RUNNING[/code]。",
+      "times": "重复执行子任务的次数。"
+    },
+    "constants": {},
+    "signals": {}
+  },
+  "BTRepeatUntilFailure": {
+    "brief": "重复其子任务直到 [code]FAILURE[/code] 的 BT 装饰器。",
+    "desc": "BTRepeatUntilFailure 会重复其子任务，直到其返回 [code]FAILURE[/code]。\n如果子任务返回 [code]RUNNING[/code] 或 [code]SUCCESS[/code]，则返回 [code]RUNNING[/code]。\n如果子任务返回 [code]FAILURE[/code]，则返回 [code]SUCCESS[/code]。"
+  },
+  "BTRepeatUntilSuccess": {
+    "brief": "重复其子任务直到 [code]SUCCESS[/code] 的 BT 装饰器。",
+    "desc": "BTRepeatUntilSuccess 会重复其子任务，直到其返回 [code]SUCCESS[/code]。\n如果子任务返回 [code]RUNNING[/code] 或 [code]FAILURE[/code]，则返回 [code]RUNNING[/code]。\n如果子任务返回 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。"
+  },
+  "BTRunLimit": {
+    "brief": "将子任务的执行限制为有限次数的 BT 装饰器。",
+    "desc": "BTRunLimit 将子任务的执行限制在由 [member run_limit] 定义的最大次数内。\n如果超过执行次数限制，则返回 [code]FAILURE[/code]；否则返回子任务的状态。",
+    "members": {
+      "count_policy": "哪些运行应计入限制：成功的、失败的，还是全部？",
+      "run_limit": "允许子任务执行的最大次数。"
+    },
+    "constants": {
+      "COUNT_SUCCESSFUL": "仅将成功的运行计入限制。",
+      "COUNT_FAILED": "仅将失败的运行计入限制。",
+      "COUNT_ALL": "将成功和失败的运行都计入限制。"
+    }
+  },
+  "BTSelector": {
+    "brief": "按顺序执行任务，直到首次返回 [code]SUCCESS[/code] 的行为树组合节点。",
+    "desc": "BTSelector 按顺序（从第一个到最后一个）执行其子任务，直到任一子任务返回 [code]SUCCESS[/code]。如果某个子任务返回 [code]FAILURE[/code]，BTSelector 将立即执行下一个子任务，直到其中一个返回 [code]SUCCESS[/code] 或全部返回 [code]FAILURE[/code]。BTSelector 和 [BTSequence] 是行为树中最常见的两种构建块。本质上，[BTSequence] 类似于布尔 AND 运算，而 BTSelector 类似于布尔 OR 运算。选择器使行为树能够响应环境变化，并在各种回退行为之间触发过渡。\n如果某个子任务返回 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。BTSelector 会记住最后一个返回 [code]RUNNING[/code] 的子任务，确保在下一个执行 tick 中从该处继续。\n如果某个子任务返回 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。\n如果所有子任务都返回 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。"
+  },
+  "BTSequence": {
+    "brief": "只要子任务返回 [code]SUCCESS[/code] 就按顺序执行它们的行为树组合节点。",
+    "desc": "BTSequence 按顺序（从第一个到最后一个）执行其子任务，只要它们返回 [code]SUCCESS[/code] 就继续。如果某个子任务返回 [code]SUCCESS[/code]，BTSequence 将立即执行下一个子任务，直到其中一个返回 [code]FAILURE[/code] 或全部返回 [code]SUCCESS[/code]。BTSequence 和 [BTSelector] 是行为树中最常见的两种构建块。本质上，[BTSelector] 类似于布尔 OR 运算，而 BTSequence 类似于布尔 AND 运算。序列使行为树能够由一系列更简单的任务组合出复杂的行为。\n如果任一子任务返回 [code]RUNNING[/code]，则返回 [code]RUNNING[/code]。BTSequence 会记住最后一个返回 [code]RUNNING[/code] 的子任务，确保在下一个执行 tick 中从该处继续。\n如果所有子任务都返回 [code]SUCCESS[/code]，则返回 [code]SUCCESS[/code]。\n如果某个子任务返回 [code]FAILURE[/code]，则返回 [code]FAILURE[/code]。"
+  },
+  "BTSetAgentProperty": {
+    "brief": "为指定代理的属性赋值的 BT 动作。",
+    "desc": "BTSetAgentProperty 将指定的 [member value] 赋值给由 [member property] 标识的代理属性，并返回 [code]SUCCESS[/code]。它可以选择在赋值前执行特定的 [member operation]。\n如果设置属性失败，则返回 [code]FAILURE[/code]。",
+    "members": {
+      "operation": "指定赋值前要执行的操作。操作按如下方式执行：\n[code]property = property OPERATION value[/code]",
+      "property": "指定代理属性名称的参数。",
+      "value": "指定将赋值给代理属性的值的参数。"
+    }
+  },
+  "BTSetVar": {
+    "brief": "将 [member value] 赋值给 [member variable] 并返回 [code]SUCCESS[/code] 的 BT 动作。",
+    "desc": "BTSetVar 将 [member value] 赋值给 [member variable]，然后返回 [code]SUCCESS[/code]。它可以选择在赋值前执行特定的 [member operation]。\n如果设置 [member variable] 失败，则返回 [code]FAILURE[/code]。",
+    "members": {
+      "operation": "指定赋值前要执行的操作。操作按如下方式执行：\n[code]variable = variable OPERATION value[/code]",
+      "value": "指定要赋值给变量的值的参数。",
+      "variable": "要赋值的目标变量的名称。"
+    }
+  },
+  "BTState": {
+    "brief": "承载 [BehaviorTree] 的 [LimboHSM] 状态节点。",
+    "desc": "BTState 是一个 [LimboState] 节点，它管理一个 [BehaviorTree] 以为该状态提供行为逻辑。它会实例化并运行 [BehaviorTree] 资源，并在结果为 [code]SUCCESS[/code] 或 [code]FAILURE[/code] 时派发状态机事件。事件名称可通过 [member success_event] 和 [member failure_event] 自定义。关于状态机事件的更多细节，请参阅 [method LimboState.dispatch]。",
+    "methods": {
+      "get_bt_instance": "返回行为树实例。",
+      "set_scene_root_hint": "设置将用作新实例化的行为树的场景根的 [Node]。应在状态机初始化之前调用。当从代码中动态创建 [BTState] 节点时，这通常很有用。"
+    },
+    "members": {
+      "behavior_tree": "定义状态行为的 [BehaviorTree] 资源。",
+      "failure_event": "当行为树结果为 [code]FAILURE[/code] 时将派发的 HSM 事件。请参阅 [method LimboState.dispatch]。",
+      "monitor_performance": "如果为 [code]true[/code]，则为该 [BTState] 节点的每个实例在 “Debugger->Monitors” 中添加性能监视器。",
+      "success_event": "当行为树结果为 [code]SUCCESS[/code] 时将派发的 HSM 事件。请参阅 [method LimboState.dispatch]。"
+    },
+    "constants": {},
+    "signals": {}
+  },
+  "BTStopAnimation": {
+    "brief": "停止指定 [AnimationPlayer] 节点上动画播放的 BT 动作。",
+    "desc": "BTStopAnimation 动作会停止指定 [AnimationPlayer] 节点上动画的播放，并返回 [code]SUCCESS[/code]。如果设置了 [member animation_name]，则仅当指定动画当前正在播放时才会停止播放。\n如果该动作无法获取 [AnimationPlayer] 节点，则返回 [code]FAILURE[/code]。",
+    "members": {
+      "animation_name": "[AnimationPlayer] 节点中动画的键名。如果非空，BTStopAnimation 将仅当指定的动画当前正在播放时才停止播放。",
+      "animation_player": "指定 [AnimationPlayer] 节点的参数。",
+      "keep_state": "如果为 [code]true[/code]，则不会在视觉上更新动画状态。"
+    }
+  },
+  "BTSubtree": {
+    "brief": "在更大的树中实例化并运行子树的 BT 装饰器。",
+    "desc": "BTSubtree 会实例化一个 [BehaviorTree]，并在初始化时将其根任务作为子任务包含进来，同时创建一个新的 [Blackboard] 作用域。\n返回子树执行的状态。\n子树的黑板变量可以映射到主树的黑板计划变量。请查看检查器中的映射部分。\n注意：BTSubTree 被设计为一个更简单的加载器，不支持在运行时更新 [member subtree]。自定义子树装饰器更合适，并且[url=https://github.com/limbonaut/limboai/issues/94#issuecomment-2068833610]实现起来相对简单[/url]。",
+    "members": {
+      "subtree": "将被实例化为子树的 [BehaviorTree] 资源。"
+    }
+  },
+  "BTTask": {
+    "brief": "所有 [BehaviorTree] 任务的基类。",
+    "desc": "所有 [BehaviorTree] 任务的基类。任务（task）是 [BehaviorTree] 中的基本构建单元，表示特定的行为或控制流。通过将任务组合并嵌套成层级结构，可以创建复杂的行为。\n任务可以是以下类型之一：动作、条件、组合或装饰器。每种任务类型都有各自对应的子类：[BTAction]、[BTCondition]、[BTDecorator]、[BTComposite]。\n任务通过 [method _tick] 方法执行其工作并返回状态。状态值定义于 [enum BT.Status]。任务可以使用 [method _setup] 方法进行初始化。另请参阅 [method _enter] 与 [method _exit]。\n[b]注意：[/b]不要为自己的任务直接扩展 [BTTask]。请改为扩展上述子类型之一。",
+    "methods": {
+      "_enter": "当任务被“进入”（entered）时调用，即在任务的 [member status] 不为 [code]RUNNING[/code] 时执行的情况下调用。\n在执行顺序中，它在 [method _tick] 之前被调用。当主要工作开始前需要准备时使用此方法，通常是在完成任务需要多个 tick 的情况下。另请参阅 [method execute]。",
+      "_exit": "当任务被“退出”（exited）时调用，即在 [method _tick] 返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code] 状态之后调用。另请参阅 [method execute]。",
+      "_generate_name": "在未设置 [member custom_name] 的情况下，为任务生成显示名称时调用。请参阅 [method get_task_name]。",
+      "_get_configuration_warnings": "此方法返回的字符串会作为警告消息显示在行为树编辑器中。任何重写此方法的任务脚本都必须在文件顶部包含 [code]@tool[/code] 注解。",
+      "_setup": "在初始化步骤中调用，用于初始化任务。它只在任务首次执行 tick 之前被调用一次。此方法允许你在任务开始执行之前为其设置任何必要的状态或配置。",
+      "_tick": "当任务被“tick”（即由 [BTPlayer] 或 [BTState] 在更新期间执行）时调用。\n返回执行状态，如 [enum BT.Status] 中所定义。\n[b]注意：[/b]任务通过实现此方法来执行其主要功能。",
+      "abort": "递归重置任务及其子任务。如果任务处于 [code]RUNNING[/code] 状态，则会退出该任务，并将其状态重置为 [code]FRESH[/code]。",
+      "add_child": "添加子任务。[param task] 会被放置在子任务列表的末尾。",
+      "add_child_at_index": "添加子任务。[param task] 会被放置在子任务列表中的 [param idx] 位置。",
+      "clone": "复制任务及其子任务，并复制导出的成员。为提高效率，子资源会被共享，但 [BBParam] 子类型除外，它们始终会被复制。供编辑器实例化 [BehaviorTree] 以及复制粘贴任务时使用。",
+      "editor_get_behavior_tree": "返回拥有此任务的行为树。仅在编辑器中可用。",
+      "execute": "执行任务。执行遵循特定顺序：\n- 如果任务当前的 [member status] 不是 [code]RUNNING[/code]，则首先调用 [method _enter] 方法。\n- 接着，调用 [method _tick] 方法执行任务的工作。\n- 如果 [method _tick] 方法返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code] 状态，则接下来会调用 [method _exit] 方法，作为执行清理的一部分。",
+      "get_child": "通过指定索引返回子任务。",
+      "get_child_count": "返回子任务的数量。",
+      "get_child_count_excluding_comments": "返回子任务的数量，不计入 [BTComment] 任务。",
+      "get_enabled_child_count": "返回已启用子任务的数量。[BTComment] 任务以及在编辑器中被禁用的任务不计入该数量。",
+      "get_index": "返回任务在行为树分支中的位置。如果任务不属于任务树（即没有父任务），则返回 [code]-1[/code]。",
+      "get_parent": "返回任务的父任务。",
+      "get_root": "返回行为树的根任务。",
+      "get_task_name": "此方法返回的字符串用于在编辑器中表示该任务。\n在未设置 [member custom_name] 的情况下，会调用 [method _generate_name] 方法为任务生成显示名称。",
+      "has_child": "如果 [param task] 是此任务的子任务，则返回 [code]true[/code]。",
+      "initialize": "初始化任务。设置 [member agent] 和 [member blackboard]，并为该任务及其子任务调用 [method _setup]。\n该方法会针对每个子任务递归调用。[param scene_root] 应为使用该行为树的场景的根节点（例如，包含该行为树的节点的拥有者）。",
+      "is_descendant_of": "如果此任务是 [param task] 的后代，则返回 [code]true[/code]。换言之，此任务必须是 [param task] 的子任务，或者是其子任务或孙任务之一。",
+      "is_enabled": "如果此任务在编辑器中已启用，则返回 [code]true[/code]。如果为 [code]false[/code]，则此任务及其分支在运行时不会被实例化，就像它们从未存在过一样。[BTComment] 始终返回 [code]false[/code]。",
+      "is_root": "如果此任务是其行为树的根任务，则返回 [code]true[/code]。一棵行为树只能有一个根任务。",
+      "next_sibling": "返回父任务的子任务列表中位于此任务之后的下一任务。\n如果此任务没有父任务，或它是父任务的子任务列表中的最后一个子任务，则返回 [code]null[/code]。",
+      "print_tree": "将以该任务为起点的子树打印到控制台。",
+      "remove_child": "从子任务中移除 [param task]。",
+      "remove_child_at_index": "从子任务中移除指定索引处的子任务。"
+    },
+    "members": {
+      "agent": "代理是 [BehaviorTree] 实例的上下文对象。通常是使用该 [BehaviorTree] 资源的 [BTPlayer] 节点的父节点。",
+      "blackboard": "提供对 [Blackboard] 的访问。黑板用于在关联的 [BehaviorTree] 的各个任务之间共享数据。\n有关更多信息，请参阅 [Blackboard]。\n[b]调试：[/b]在 LimboAI 调试器中选中某个任务时，其属性会显示在远程检查器中。单击 [Blackboard] 引用可跨完整的作用域链检查和编辑变量。",
+      "custom_name": "用户为任务提供的名称。若非空，编辑器会用它来表示该任务。请参阅 [method get_task_name]。",
+      "elapsed_time": "自任务被“进入”以来经过的时间。请参阅 [method _enter]。\n当任务不处于 [code]RUNNING[/code] 时返回 [code]0[/code]。",
+      "scene_root": "使用该行为树的场景的根节点（例如，[BTPlayer] 节点的拥有者）。可用于获取 [NodePath] 引用。\n[b]示例：[/b]\n[codeblock]\nextends BTAction\n\n@export var node_path: NodePath\n\nfunc _setup():\n    var node: Node = scene_root.get_node(node_path)\n[/codeblock]",
+      "status": "最后一次执行时由 [method _tick] 返回的 [enum BT.Status] 值。"
+    },
+    "constants": {},
+    "signals": {}
+  },
+  "BTTimeLimit": {
+    "brief": "为子任务的执行设置时间限制的 BT 装饰器。",
+    "desc": "BTTimeLimit 为子任务的执行分配有限的时间，并在超过 [member time_limit] 时中止它，返回 [code]FAILURE[/code]。\n如果超过 [member time_limit]，则返回 [code]FAILURE[/code]；否则返回子任务的状态。",
+    "members": {
+      "time_limit": "分配给子任务执行的时间。"
+    }
+  },
+  "BTWait": {
+    "brief": "等待指定 [member duration] 结束，然后返回 [code]SUCCESS[/code] 的 BT 动作。"
+  },
+  "BTWaitTicks": {
+    "brief": "等待指定数量的 tick 结束后返回 [code]SUCCESS[/code] 的 BT 动作。",
+    "members": {
+      "num_ticks": "在返回 [code]SUCCESS[/code] 之前要等待的 tick 数。"
+    }
+  },
+  "BehaviorTree": {
+    "brief": "包含行为树数据。",
+    "desc": "行为树是一种分层结构，用于对游戏中代理（例如角色、敌人、实体）的行为进行建模和控制。其设计目标是让你更轻松地为游戏创建复杂且高度模块化的行为。\n行为树由任务组成，这些任务代表具体的动作或决策规则。任务大致可分为两种主要类型：控制任务和叶子任务。控制任务决定树内的执行流程，它们包括 [BTSequence]、[BTSelector] 和 [BTInvert]。叶子任务代表要执行的特定动作（例如移动或攻击），或需要检查的条件。[BTTask] 类为行为树的各种构建块提供了基础。行为树任务可以借助 [Blackboard] 共享数据。另请参阅 [member BTTask.blackboard] 和 [Blackboard]。\n[b]注意：[/b]要创建你自己的动作，请扩展 [BTAction] 类。\n行为树从根任务开始执行，遵循控制任务指定的规则，一直向下延伸到叶子任务，叶子任务代表代理应执行的实际动作或应检查的条件。每个任务在执行时都会返回一个状态，该状态可以是 [code]SUCCESS[/code]、[code]RUNNING[/code] 或 [code]FAILURE[/code]。这些状态决定树的推进方式，它们定义在 [enum BT.Status] 中。\n行为树使用条件任务处理条件逻辑。这些任务检查特定条件，并根据代理或其环境的状态（例如“IsLowOnHealth”、“IsTargetInSight”）返回 [code]SUCCESS[/code] 或 [code]FAILURE[/code]。条件可以与 [BTSequence] 和 [BTSelector] 一起使用，以构建你的决策逻辑。\n[b]注意[/b]：要创建你自己的条件，请扩展 [BTCondition] 类。\n请查看 [BTTask] 类，它为行为树的各种构建块提供了基础。",
+    "methods": {
+      "clone": "创建 BehaviorTree 资源的副本。",
+      "copy_other": "成为另一个行为树的副本。",
+      "get_root_task": "返回 BehaviorTree 资源的根任务。",
+      "instantiate": "实例化行为树并返回 [BTInstance]。[param instance_owner] 应该是将拥有该行为树实例的场景节点，通常是 [BTPlayer]、[BTState] 或控制行为树执行的自定义播放器节点。请确保传入的 [Blackboard] 已使用 [member blackboard_plan] 中的值填充。另请参阅 [method BlackboardPlan.populate_blackboard] 和 [method BlackboardPlan.create_blackboard]。\n如果 [param custom_scene_root] 不为 [code]null[/code]，它将用作新实例化的行为树的场景根；否则，场景根将被设置为 [code]instance_owner.owner[/code]。场景根对于 [BBNode] 实例正常工作至关重要。",
+      "set_root_task": "为 [BehaviorTree] 资源分配一个新的根任务。"
+    },
+    "members": {
+      "blackboard_plan": "存储并管理用于构造新 [Blackboard] 实例的变量。",
+      "description": "[BehaviorTree] 的用户自定义描述。"
+    },
+    "signals": {
+      "branch_changed": "当包含的 [BTTask] 或其分支以需要刷新整个分支的方式发生变化时发出。此信号仅在编辑器中发出。",
+      "plan_changed": "当 [BlackboardPlan] 发生变化时发出。"
+    }
+  },
+  "BehaviorTreeData": {
+    "brief": "表示 [BehaviorTree] 实例的当前状态。",
+    "desc": "此类由 LimboAI 调试器用于序列化和反序列化 [BehaviorTree] 实例数据。\n此外，它可以与 [BehaviorTreeView] 一起使用，以可视化 [BehaviorTree] 实例的当前状态。它旨在用于自定义的游戏内工具。",
+    "methods": {
+      "create_from_bt_instance": "返回编码为 [BehaviorTreeData] 的 [param bt_instance] 当前状态，适合与 [BehaviorTreeView] 一起使用。\n行为树实例可以通过 [method BTPlayer.get_bt_instance] 获取。"
+    }
+  },
+  "BehaviorTreeView": {
+    "brief": "可视化 [BehaviorTree] 实例的当前状态。",
+    "desc": "可视化 [BehaviorTree] 实例的当前状态。另请参阅 [BehaviorTreeData]。",
+    "methods": {
+      "clear": "清除树视图。",
+      "update_tree": "更新 [BehaviorTree] 实例的表示。另请参阅 [BehaviorTreeData]。"
+    },
+    "members": {
+      "update_interval_msec": "两次更新之间的最小延迟（毫秒）。设置为更高的值可降低 CPU 负载。"
+    },
+    "signals": {
+      "task_selected": "当在 [BehaviorTreeView] 中选中任务项时发出。"
+    }
+  },
+  "Blackboard": {
+    "brief": "用于在 [LimboHSM] 状态和 [BehaviorTree] 任务之间共享数据的键值存储。",
+    "desc": "黑板是存储数据、并在 [LimboHSM] 系统中的状态与 [BehaviorTree] 中的任务之间共享数据的地方。[BehaviorTree] 中的每个状态和任务都可以访问此黑板，从而能够读取和写入数据。这样便可以在不同的动作和行为之间轻松共享信息。\n黑板也可以充当另一个黑板的父作用域。如果在活动作用域中找不到某个特定变量，就会到父黑板中查找。父黑板本身也可以有自己的父作用域，从而形成我们所说的“黑板作用域链”。重要的是，这条链中的黑板数量没有限制，并且黑板不会修改父作用域中的值。\n可以使用 [BTNewScope] 和 [BTSubtree] 装饰器创建新的作用域。此外，对于定义了非空黑板数据的任何 [LimboState]，或对于任何根级 [LimboHSM] 节点，都会自动创建新的作用域。\n[b]调试：[/b]在调试正在运行的项目时，可以在远程检查器中查看黑板，它会按作用域分组显示完整作用域链中的所有变量。变量也可以实时编辑。",
+    "methods": {
+      "bind_var_to_property": "在变量与由 [param property] 和 [param object] 指定的对象属性之间建立绑定。变量的更改会更新该属性，反之亦然。如果 [param create] 为 [code]true[/code]，则变量不存在时会被创建。",
+      "clear": "从黑板中移除所有变量。父作用域不受影响。",
+      "erase_var": "按名称移除变量。",
+      "get_parent": "返回作为此实例父作用域的黑板。",
+      "get_var": "返回变量值；如果变量不存在，则返回 [param default]。如果 [param complain] 为 [code]true[/code]，则变量不存在时会打印错误。如果变量不在当前 [Blackboard] 作用域中，则会到父作用域 [Blackboard] 中查找。",
+      "get_vars_as_dict": "以字典形式返回黑板中的所有变量。键为变量名称，值为变量值。不包括父作用域。",
+      "has_var": "如果黑板（包括父作用域）包含 [param var_name] 变量，则返回 [code]true[/code]。",
+      "link_var": "将变量链接到另一个黑板变量。如果某个变量链接到另一个变量，它们的状态将始终保持一致，且对其中一个的任何更改都会反映到另一个上。如果 [param create] 为 [code]true[/code]，则变量不存在时会被创建。\n可以使用此方法将当前作用域中的变量链接到另一个作用域中的变量，或另一个黑板实例中的变量。一个变量只能链接到另一个变量。再次调用此方法会覆盖先前的链接。但是，可以从多个不同的变量链接到同一个变量。",
+      "list_vars": "返回黑板中的所有变量名称。不包括父作用域。",
+      "populate_from_dict": "使用字典中的多个变量填充黑板。字典的键必须是变量名称，字典的值必须是变量值。键必须是 StringName 或 String。",
+      "print_state": "打印每个作用域中所有变量的值。",
+      "set_parent": "设置父作用域。如果某个值不在当前黑板作用域中，则会到父作用域黑板中查找。",
+      "set_var": "为当前黑板作用域中的变量赋值。如果变量不存在，则会被创建。如果变量已存在于父作用域中，则父作用域的值将不会被更改。",
+      "top": "返回作用域链中最顶层的 [Blackboard]。",
+      "unbind_var": "移除变量的绑定。"
+    },
+    "members": {},
+    "constants": {},
+    "signals": {}
+  },
+  "BlackboardPlan": {
+    "brief": "存储并管理用于构造新 [Blackboard] 实例的变量。",
+    "desc": "",
+    "methods": {
+      "create_blackboard": "使用此计划构造一个新的 [Blackboard] 实例。如果启用了 [NodePath] 预取，将使用 [param prefetch_root] 获取 [NodePath] 变量对应的节点实例并替换其值。",
+      "get_base_plan": "返回基础计划。请参阅 [method is_derived]。",
+      "get_parent_scope_plan_provider": "返回父作用域计划提供者，即一个返回 [BlackboardPlan] 的可调用对象。",
+      "is_derived": "如果此计划派生自另一个计划（即基础计划不为 [code]null[/code]），则返回 [code]true[/code]。派生计划只能包含基础计划中存在的变量，并且只有变量的值可以不同。",
+      "populate_blackboard": "使用此计划中的变量填充 [param blackboard]。如果 [param overwrite] 为 [code]true[/code]，则将覆盖名称相同的现有变量。如果启用了 [NodePath] 预取，将使用 [param prefetch_root] 获取 [NodePath] 变量对应的节点实例并替换其值。",
+      "set_base_plan": "设置基础计划。如果已赋值，此计划将派生自该基础计划。\n请谨慎使用，因为它会移除基础计划中不存在的变量。仅将此用于自定义工具。",
+      "set_parent_scope_plan_provider": "设置父作用域计划提供者，即一个返回 [BlackboardPlan] 的可调用对象。用于在检查器中提供提示。设置后，映射功能将变为可用。",
+      "sync_with_base_plan": "将此计划与基础计划同步：移除基础计划中不存在的变量，并更新类型信息。仅将此用于自定义工具。"
+    },
+    "members": {
+      "prefetch_nodepath_vars": "启用或禁用 [NodePath] 变量预取。如果为 [code]true[/code]，则在创建 [Blackboard] 时，[NodePath] 值将被替换为节点实例。"
+    }
+  },
+  "LimboHSM": {
+    "brief": "基于事件的分层状态机（HSM）。",
+    "desc": "基于事件的分层状态机（HSM），用于管理 [LimboState] 实例并便于在它们之间进行过渡。LimboHSM 本身就是一个 [LimboState]，也可以作为另一个 LimboHSM 节点的子节点。",
+    "methods": {
+      "add_transition": "当派发 [param event] 时，建立从某个状态到另一个状态的过渡。[param from_state] 和 [param to_state] 都必须是此 [LimboHSM] 的直接子节点。\n可以选择性地指定 [param guard] 函数，该函数必须返回布尔值。如果守卫函数返回 [code]false[/code]，则过渡不会发生。守卫函数会在考虑过渡之前立即被调用。对于状态级别的守卫函数，请参阅 [method LimboState.set_guard]。\n[codeblock]\nfunc my_guard() -> bool:\n    return is_some_condition_met()\n[/codeblock]",
+      "change_active_state": "将当前活动的子状态更改为 [param state]。如果 [param state] 已经处于活动状态，则会先退出再重新进入。\n[param state] 必须是此 [LimboHSM] 的子节点。",
+      "get_active_state": "返回当前活动的子状态。",
+      "get_leaf_state": "返回状态机内当前活动的叶子状态。",
+      "get_previous_active_state": "返回先前活动的子状态。",
+      "has_transition": "如果 [param from_state] 针对给定的 [param event] 存在过渡，则返回 [code]true[/code]。",
+      "initialize": "初始化该状态，并为其自身及所有子状态调用 [method LimboState._setup]。",
+      "remove_transition": "移除某个状态中与特定 [param event] 关联的过渡。",
+      "set_active": "当设置为 [code]true[/code] 时，将状态切换为 [member initial_state]，并根据 [member update_mode] 激活状态处理。",
+      "update": "对自身和活动子状态调用 [method LimboState._update]，调用会逐级向下传递至叶子状态。如果 [member update_mode] 未设置为 [constant MANUAL]，则会自动触发此方法。"
+    },
+    "members": {
+      "ANYSTATE": "用于定义从任意状态出发的过渡。",
+      "initial_state": "使用 [method set_active] 方法激活状态机时变为活动的子状态。如果未显式设置，则 LimboHSM 的第一个子节点将被视为初始状态。",
+      "update_mode": "指定状态机应在何时更新。请参阅 [enum UpdateMode]。"
+    },
+    "constants": {
+      "IDLE": "在空闲处理期间更新状态机。",
+      "PHYSICS": "在物理处理期间更新状态机。",
+      "MANUAL": "通过在脚本中调用 [method update] 手动更新状态机。"
+    },
+    "signals": {
+      "active_state_changed": "当当前活动的子状态切换到另一个子状态时发出。"
+    }
+  },
+  "LimboState": {
+    "brief": "用于分层状态机（HSM）的状态节点。",
+    "desc": "用于分层状态机（HSM）的 LimboAI 状态节点。\n你可以通过扩展此类来创建你的状态行为。要实现状态逻辑，可以重写 [method _enter]、[method _exit]、[method _setup] 和 [method _update]。或者，你可以使用 [code]call_on_*[/code] 方法将状态实现委托给外部方法。\n有关状态机的更多细节，请参阅 [LimboHSM]。",
+    "methods": {
+      "_enter": "当进入状态时调用。",
+      "_exit": "当退出状态时调用。这发生在过渡到另一个状态时，以及状态机从场景树中移除时（例如使用 [method Node.queue_free] 释放节点或场景发生变化时）。由于实现细节，在 [method Object.free] 时不会调用 [method _exit]！",
+      "_setup": "在初始化期间调用一次。使用此方法初始化你的状态。",
+      "_update": "在更新期间调用。使用此方法实现你的状态行为。",
+      "add_event_handler": "注册一个 [param handler]，在分发 [param event] 时调用。处理函数应具有以下签名：\n[codeblock]\nfunc my_event_handler(cargo=null) -> bool:\n[/codeblock]\n如果处理函数返回 [code]true[/code]，事件将被消耗。Cargo 是一个可选参数，可以传递给处理函数。另请参阅 [method dispatch]。",
+      "call_on_enter": "链式方法，将 [signal entered] 信号连接到 [param callable]。",
+      "call_on_exit": "链式方法，将 [signal exited] 信号连接到 [param callable]。",
+      "call_on_update": "链式方法，将 [signal updated] 信号连接到 [param callable]。",
+      "clear_guard": "清除守卫函数，移除先前由 [method set_guard] 设置的 [Callable]。",
+      "dispatch": "递归分发名为 [param event] 的状态机事件，可选参数为 [param cargo]。如果事件被消耗，则返回 [code]true[/code]。\n事件从叶子状态向根状态传播，一旦任何状态消耗该事件，传播就会停止。如果状态有相关的过渡或事件处理器，就会消耗该事件。有关事件处理器的更多信息，请参阅 [method add_event_handler]。",
+      "get_cargo": "返回传递给 [method dispatch] 的 cargo。仅在 [method _enter] 期间可用。",
+      "get_root": "返回根 [LimboState]。",
+      "is_active": "如果当前处于活动状态（即它是父 [LimboHSM] 的活动子状态），则返回 [code]true[/code]。",
+      "named": "用于设置此状态名称的链式方法。",
+      "remove_event_handler": "取消注册由 [method add_event_handler] 添加的事件处理器（如果存在）。",
+      "restart": "如果它处于活动状态，则退出并再次进入。",
+      "set_guard": "设置守卫函数，该函数在每次考虑过渡到此状态时调用。如果函数返回 [code]false[/code]，则不允许该过渡。"
+    },
+    "members": {
+      "EVENT_FINISHED": "一种常用事件，表示状态已完成其工作。\n此事件对每个状态都是唯一的。",
+      "agent": "与状态关联的代理，在初始化时分配。",
+      "blackboard": "由该状态所属状态机内的各状态共享的键/值数据存储。\n[b]调试：[/b]在调试正在运行的项目时，在远程场景树中选择一个 [LimboState] 节点，即可在远程检查器中查看其属性。点击 [Blackboard] 引用，可以查看并编辑整个作用域链中的变量。",
+      "blackboard_plan": "存储并管理用于构造新 [Blackboard] 实例的变量。"
+    },
+    "signals": {
+      "entered": "当进入状态时发出。",
+      "exited": "当退出状态时发出。",
+      "setup": "当状态初始化时发出。",
+      "updated": "当状态更新时发出。"
+    }
+  },
+  "LimboUtility": {
+    "brief": "LimboAI 的辅助函数。",
+    "desc": "",
+    "methods": {
+      "decorate_output_var": "与 [method decorate_var] 类似，生成一个包含 [Blackboard] 变量名并针对显示进行了格式化的字符串，同时额外添加一个符号，表示该变量被用作输出。",
+      "decorate_var": "生成一个包含 [Blackboard] 变量名并针对显示或控制台输出进行了格式化的字符串。",
+      "get_check_operator_string": "返回 [enum CheckType] 枚举值对应的运算符字符串。例如，[constant CHECK_EQUAL] 返回 \"==\"。",
+      "get_operation_string": "返回 [enum Operation] 枚举值的字符串表示。",
+      "get_status_name": "返回 [BTTask] 状态码的名称。",
+      "get_task_icon": "根据任务的类名或脚本资源路径，返回与该任务关联的图标纹理。",
+      "perform_check": "对两个值 [param a] 和 [param b] 执行 [param check]，如果检查通过则返回 [code]true[/code]。",
+      "perform_operation": "对两个值 [param a] 和 [param b] 执行 [param operation]，并返回结果。"
+    },
+    "members": {},
+    "constants": {
+      "CHECK_EQUAL": "相等检查。",
+      "CHECK_LESS_THAN": "小于检查。",
+      "CHECK_LESS_THAN_OR_EQUAL": "小于或等于检查。",
+      "CHECK_GREATER_THAN": "大于检查。",
+      "CHECK_GREATER_THAN_OR_EQUAL": "大于或等于检查。",
+      "CHECK_NOT_EQUAL": "不相等检查。",
+      "OPERATION_NONE": "无操作。",
+      "OPERATION_ADDITION": "算术加法。",
+      "OPERATION_SUBTRACTION": "算术减法。",
+      "OPERATION_MULTIPLICATION": "算术乘法。",
+      "OPERATION_DIVISION": "算术除法。",
+      "OPERATION_MODULO": "取整数除法的余数。",
+      "OPERATION_POWER": "将 [code]a[/code] 自乘 [code]b[/code] 次。",
+      "OPERATION_BIT_SHIFT_LEFT": "按位左移。",
+      "OPERATION_BIT_SHIFT_RIGHT": "按位右移。",
+      "OPERATION_BIT_AND": "按位与。",
+      "OPERATION_BIT_OR": "按位或。",
+      "OPERATION_BIT_XOR": "按位异或。"
+    },
+    "signals": {}
+  }
+}
