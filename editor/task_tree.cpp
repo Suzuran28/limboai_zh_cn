@@ -17,6 +17,7 @@
 #include "../compat/editor_scale.h"
 #include "../compat/object.h"
 #include "../compat/resource.h"
+#include "../compat/translation.h"
 #include "../util/limbo_utility.h"
 #include "tree_search.h"
 
@@ -80,7 +81,7 @@ void TaskTree::_update_item(TreeItem *p_item) {
 		p_item->set_custom_font(0, theme_cache.comment_font);
 		p_item->set_custom_color(0, theme_cache.comment_color);
 		if (!task->is_enabled() && !IS_CLASS(task, BTComment)) {
-			p_item->set_text(0, task->get_task_name() + "  (disabled)");
+			p_item->set_text(0, vformat(TTR("%s (disabled)"), task->get_task_name()));
 		}
 	} else if (task->get_custom_name().is_empty()) {
 		p_item->set_custom_font(0, theme_cache.normal_name_font);

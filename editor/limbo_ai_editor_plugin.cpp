@@ -2045,6 +2045,11 @@ Ref<Texture2D> LimboAIEditorPlugin::_get_plugin_icon() const {
 #endif // LIMBOAI_GDEXTENSION
 
 LimboAIEditorPlugin::LimboAIEditorPlugin() {
+#ifdef LIMBOAI_GDEXTENSION
+	// Load editor UI translation catalogs before any UI text is created.
+	limboai_load_editor_translations();
+#endif
+
 	limbo_ai_editor = memnew(LimboAIEditor());
 	limbo_ai_editor->set_v_size_flags(Control::SIZE_EXPAND_FILL);
 	EditorInterface::get_singleton()->get_editor_main_screen()->add_child(limbo_ai_editor);

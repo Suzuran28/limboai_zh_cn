@@ -583,9 +583,9 @@ TreeSearchPanel::TreeSearchPanel() {
 	find_next_button->set_theme_type_variation(LW_NAME(FlatButton));
 	find_prev_button->set_theme_type_variation(LW_NAME(FlatButton));
 
-	find_next_button->set_tooltip_text("Next Match");
-	find_prev_button->set_tooltip_text("Previous Match");
-	line_edit_search->set_tooltip_text("Match case if input contains capital letter.");
+	find_next_button->set_tooltip_text(TTR("Next Match"));
+	find_prev_button->set_tooltip_text(TTR("Previous Match"));
+	line_edit_search->set_tooltip_text(TTR("Match case if input contains capital letter."));
 
 	// Positioning and sizing
 	set_anchors_and_offsets_preset(LayoutPreset::PRESET_BOTTOM_WIDE);

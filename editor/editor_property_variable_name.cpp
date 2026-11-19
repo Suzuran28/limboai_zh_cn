@@ -92,10 +92,9 @@ void EditorPropertyVariableName::_update_status() {
 			status_btn->set_tooltip_text(TTR("This variable is present in the blackboard plan.\nClick to open the blackboard plan."));
 		} else {
 			status_btn->set_button_icon(theme_cache.var_error_icon);
-			status_btn->set_tooltip_text(TTR(vformat(
-					"The %s variable in the blackboard plan should be of type %s.\nClick to open the blackboard plan.",
+			status_btn->set_tooltip_text(vformat(TTR("The %s variable in the blackboard plan should be of type %s.\nClick to open the blackboard plan."),
 					LimboUtility::get_singleton()->decorate_var(var_name),
-					Variant::get_type_name(expected_type))));
+					Variant::get_type_name(expected_type)));
 		}
 	} else if (name_edit->get_text().begins_with("_")) {
 		status_btn->set_button_icon(theme_cache.var_private_icon);
