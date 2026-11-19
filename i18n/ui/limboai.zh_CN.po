@@ -1,0 +1,617 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LimboAI 1.8.1 zh_CN\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: editor/task_tree.cpp:84
+msgid "%s (disabled)"
+msgstr "%s（已禁用）"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:327
+msgid "%s - Godot Engine"
+msgstr "%s - Godot 引擎"
+
+#: editor/limbo_ai_editor_plugin.cpp:120
+msgid "Add BT Task"
+msgstr "添加行为树任务"
+
+#: editor/task_palette.cpp:265
+msgid "Add to Favorites"
+msgstr "添加到收藏"
+
+#: editor/blackboard_plan_editor.cpp:526
+msgid "Add variable"
+msgstr "添加变量"
+
+#: editor/owner_picker.cpp:99
+msgid "Alert!"
+msgstr "警告！"
+
+#: editor/task_palette.cpp:705
+#: editor/task_palette.cpp:745
+msgid "All"
+msgstr "全部"
+
+#: editor/limbo_ai_editor_plugin.cpp:1812
+msgid "Behavior Tree Editor"
+msgstr "行为树编辑器"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:131
+msgid "Behavior tree instance is no longer present."
+msgstr "行为树实例已不存在。"
+
+#: editor/editor_property_property_path.cpp:140
+#: editor/editor_property_property_path.cpp:182
+msgid "Bind..."
+msgstr "绑定…"
+
+#: editor/editor_property_bb_param.cpp:217
+msgid "Blackboard Variable"
+msgstr "黑板变量"
+
+#: editor/task_palette.cpp:734
+msgid "Categories"
+msgstr "类别"
+
+#: editor/limbo_ai_editor_plugin.cpp:1164
+msgid "Change BT task type"
+msgstr "更改行为树任务类型"
+
+#: editor/limbo_ai_editor_plugin.cpp:554
+msgid "Change Type"
+msgstr "更改类型"
+
+#: editor/limbo_ai_editor_plugin.cpp:1840
+msgid "Choose New Type"
+msgstr "选择新类型"
+
+#: editor/editor_property_property_path.cpp:196
+msgid "Clear"
+msgstr "清除"
+
+#: editor/editor_property_bb_param.cpp:251
+msgid "Click to choose type"
+msgstr "点击选择类型"
+
+#: editor/limbo_ai_editor_plugin.cpp:1734
+msgid "Click to copy."
+msgstr "点击复制。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1326
+msgid "Close All Tabs"
+msgstr "关闭所有标签页"
+
+#: editor/limbo_ai_editor_plugin.cpp:1324
+msgid "Close Other Tabs"
+msgstr "关闭其他标签页"
+
+#: editor/limbo_ai_editor_plugin.cpp:1643
+msgid "Close Search"
+msgstr "关闭搜索"
+
+#: editor/limbo_ai_editor_plugin.cpp:1641
+msgid "Close Tab"
+msgstr "关闭标签页"
+
+#: editor/limbo_ai_editor_plugin.cpp:1325
+msgid "Close Tabs to the Right"
+msgstr "关闭右侧标签页"
+
+#: editor/limbo_ai_editor_plugin.cpp:615
+msgid "Comment"
+msgstr "注释"
+
+#: editor/blackboard_plan_editor.cpp:534
+#: editor/limbo_ai_editor_plugin.cpp:1632
+msgid "Copy"
+msgstr "复制"
+
+#: editor/editor_property_property_path.cpp:197
+msgid "Copy as Text"
+msgstr "复制为文本"
+
+#: editor/task_palette.cpp:714
+msgid "Core"
+msgstr "核心"
+
+#: editor/owner_picker.cpp:100
+msgid "Couldn't find owner. Looks like it's not used by any other resource."
+msgstr "找不到拥有者。它似乎没有被其他资源使用。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1485
+msgid "Create"
+msgstr "创建"
+
+#: editor/limbo_ai_editor_plugin.cpp:1464
+msgid "Create Script Template"
+msgstr "创建脚本模板"
+
+#: editor/limbo_ai_editor_plugin.cpp:1687
+msgid "Create a new behavior tree."
+msgstr "创建新的行为树。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1787
+msgid "Create a new or load an existing behavior tree."
+msgstr "创建新行为树，或加载已有行为树。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1713
+msgid "Create new task script and edit it."
+msgstr "创建新任务脚本并进行编辑。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1453
+msgid "Creating custom tasks in GDScript"
+msgstr "使用 GDScript 创建自定义任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:619
+msgid "Custom Name"
+msgstr "自定义名称"
+
+#: editor/limbo_ai_editor_plugin.cpp:1631
+msgid "Cut"
+msgstr "剪切"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:244
+msgid "Debugged BehaviorTree resource.\nClick to open."
+msgstr "正在调试的 BehaviorTree 资源。\n点击打开。"
+
+#: editor/task_palette.cpp:782
+msgid "Deselect all categories"
+msgstr "取消选择所有类别"
+
+#: editor/limbo_ai_editor_plugin.cpp:644
+msgid "Disable BT tasks"
+msgstr "禁用行为树任务"
+
+#: editor/task_palette.cpp:763
+msgid "Don't show tasks from selected categories"
+msgstr "不显示所选类别的任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1071
+msgid "Drag BT Task"
+msgstr "拖动行为树任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1629
+msgid "Duplicate"
+msgstr "创建副本"
+
+#: editor/limbo_ai_editor_plugin.cpp:778
+msgid "Duplicate BT Tasks"
+msgstr "创建行为树任务副本"
+
+#: editor/editor_property_property_path.cpp:198
+msgid "Edit"
+msgstr "编辑"
+
+#: editor/blackboard_plan_editor.cpp:671
+msgid "Edit Base"
+msgstr "编辑基类"
+
+#: editor/limbo_ai_editor_plugin.cpp:613
+msgid "Edit Comment"
+msgstr "编辑注释"
+
+#: editor/limbo_ai_editor_plugin.cpp:1502
+msgid "Edit Favorite Tasks..."
+msgstr "编辑收藏任务…"
+
+#: editor/limbo_ai_editor_plugin.cpp:1486
+msgid "Edit Path..."
+msgstr "编辑路径…"
+
+#: editor/limbo_ai_editor_plugin.cpp:551
+msgid "Edit Probability"
+msgstr "编辑概率"
+
+#: editor/limbo_ai_editor_plugin.cpp:555
+#: editor/task_palette.cpp:256
+msgid "Edit Script"
+msgstr "编辑脚本"
+
+#: editor/limbo_ai_editor_plugin.cpp:1464
+msgid "Edit Script Template"
+msgstr "编辑脚本模板"
+
+#: editor/limbo_ai_editor_plugin.cpp:1880
+msgid "Edit percent"
+msgstr "编辑百分比"
+
+#: editor/limbo_ai_editor_plugin.cpp:1871
+msgid "Edit weight"
+msgstr "编辑权重"
+
+#: editor/limbo_ai_editor_plugin.cpp:644
+msgid "Enable BT tasks"
+msgstr "启用行为树任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:576
+msgid "Enabled"
+msgstr "已启用"
+
+#: editor/task_palette.cpp:762
+msgid "Exclude"
+msgstr "排除"
+
+#: editor/limbo_ai_editor_plugin.cpp:443
+#: editor/limbo_ai_editor_plugin.cpp:593
+msgid "Extract Subtree"
+msgstr "提取子树"
+
+#: editor/limbo_ai_editor_plugin.cpp:1500
+msgid "Favorite task not found: %s"
+msgstr "未找到收藏任务：%s"
+
+#: editor/tree_search.cpp:559
+msgid "Filter"
+msgstr "过滤"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:272
+msgid "Filter Players"
+msgstr "过滤玩家"
+
+#: editor/task_palette.cpp:654
+msgid "Filter tasks"
+msgstr "过滤任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1642
+msgid "Find Task"
+msgstr "查找任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1488
+msgid "Help..."
+msgstr "帮助…"
+
+#: editor/blackboard_plan_editor.cpp:586
+msgid "Hint"
+msgstr "提示"
+
+#: editor/blackboard_plan_editor.cpp:439
+#: editor/blackboard_plan_editor.cpp:592
+msgid "Hint string"
+msgstr "提示字符串"
+
+#: editor/blackboard_plan_editor.cpp:549
+msgid "If checked, NodePath variables will be prefetched on Blackboard initialization."
+msgstr "勾选后，NodePath 变量将在黑板初始化时预取。"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:243
+#: editor/debugger/limbo_debugger_plugin.cpp:51
+msgid "Inactive"
+msgstr "未激活"
+
+#: editor/task_palette.cpp:754
+msgid "Include"
+msgstr "包含"
+
+#: editor/limbo_ai_editor_plugin.cpp:1452
+msgid "Introduction"
+msgstr "简介"
+
+#: editor/limbo_ai_editor_plugin.cpp:1640
+msgid "Jump to Owner"
+msgstr "跳转到拥有者"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:327
+msgid "LimboAI Debugger"
+msgstr "LimboAI 调试器"
+
+#: editor/limbo_ai_editor_plugin.cpp:1694
+msgid "Load"
+msgstr "加载"
+
+#: editor/limbo_ai_editor_plugin.cpp:1638
+#: editor/limbo_ai_editor_plugin.cpp:1659
+msgid "Load Behavior Tree"
+msgstr "加载行为树"
+
+#: editor/limbo_ai_editor_plugin.cpp:1695
+msgid "Load behavior tree from a resource file."
+msgstr "从资源文件加载行为树。"
+
+#: editor/limbo_ai_editor_plugin.cpp:592
+msgid "Make Root"
+msgstr "设为根任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:805
+msgid "Make as BT Root"
+msgstr "设为行为树根任务"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:222
+msgid "Make the LimboAI Debugger floating."
+msgstr "让 LimboAI 调试器悬浮。"
+
+#: compat/compat_window_wrapper.cpp:390
+msgid "Make this panel floating in the screen %d."
+msgstr "让此面板悬浮在屏幕 %d 上。"
+
+#: compat/compat_window_wrapper.cpp:466
+msgid "Make this panel floating.\nRight click to open the screen selector."
+msgstr "让此面板悬浮。\n右键打开屏幕选择器。"
+
+#: editor/blackboard_plan_editor.cpp:514
+msgid "Manage Blackboard Plan"
+msgstr "管理黑板计划"
+
+#: editor/blackboard_plan_editor.cpp:679
+msgid "Manage..."
+msgstr "管理…"
+
+#: editor/tree_search.cpp:588
+msgid "Match case if input contains capital letter."
+msgstr "输入包含大写字母时区分大小写。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1719
+msgid "Misc"
+msgstr "杂项"
+
+#: editor/limbo_ai_editor_plugin.cpp:732
+#: editor/limbo_ai_editor_plugin.cpp:758
+msgid "Move BT Tasks"
+msgstr "移动行为树任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1628
+msgid "Move Down"
+msgstr "下移"
+
+#: editor/limbo_ai_editor_plugin.cpp:1627
+msgid "Move Up"
+msgstr "上移"
+
+#: editor/blackboard_plan_editor.cpp:574
+msgid "Name"
+msgstr "名称"
+
+#: editor/limbo_ai_editor_plugin.cpp:1686
+msgid "New"
+msgstr "新建"
+
+#: editor/limbo_ai_editor_plugin.cpp:1636
+msgid "New Behavior Tree"
+msgstr "新建行为树"
+
+#: editor/limbo_ai_editor_plugin.cpp:1712
+msgid "New Task"
+msgstr "新建任务"
+
+#: editor/tree_search.cpp:586
+msgid "Next Match"
+msgstr "下一个匹配"
+
+#: editor/editor_property_variable_name.cpp:104
+msgid "No matching variable found in the blackboard plan!\nClick to open the blackboard plan."
+msgstr "黑板计划中未找到匹配的变量！\n点击打开黑板计划。"
+
+#: editor/blackboard_plan_editor.cpp:548
+msgid "NodePath Prefetching"
+msgstr "NodePath 预取"
+
+#: editor/limbo_ai_editor_plugin.cpp:614
+msgid "OK"
+msgstr "确定"
+
+#: editor/limbo_ai_editor_plugin.cpp:1451
+msgid "Online Documentation"
+msgstr "在线文档"
+
+#: editor/limbo_ai_editor_plugin.cpp:1639
+msgid "Open Debugger"
+msgstr "打开调试器"
+
+#: editor/limbo_ai_editor_plugin.cpp:556
+#: editor/task_palette.cpp:258
+msgid "Open Documentation"
+msgstr "打开文档"
+
+#: editor/blackboard_plan_editor.cpp:539
+#: editor/limbo_ai_editor_plugin.cpp:1633
+msgid "Paste"
+msgstr "粘贴"
+
+#: editor/limbo_ai_editor_plugin.cpp:1634
+msgid "Paste After Selected"
+msgstr "粘贴到所选之后"
+
+#: editor/limbo_ai_editor_plugin.cpp:704
+msgid "Paste BT Tasks"
+msgstr "粘贴行为树任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1879
+msgid "Percent"
+msgstr "百分比"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:58
+msgid "Pick a player from the list to display behavior tree."
+msgstr "从列表中选择玩家以显示其行为树。"
+
+#: editor/owner_picker.cpp:105
+msgid "Pick owner"
+msgstr "选择拥有者"
+
+#: editor/tree_search.cpp:587
+msgid "Previous Match"
+msgstr "上一个匹配"
+
+#: editor/limbo_ai_editor_plugin.cpp:1460
+msgid "Project Settings..."
+msgstr "项目设置…"
+
+#: editor/task_palette.cpp:659
+msgid "Refresh tasks"
+msgstr "刷新任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1919
+msgid "Reload"
+msgstr "重新加载"
+
+#: editor/blackboard_plan_editor.cpp:544
+#: editor/limbo_ai_editor_plugin.cpp:1501
+#: editor/limbo_ai_editor_plugin.cpp:1630
+msgid "Remove"
+msgstr "移除"
+
+#: editor/limbo_ai_editor_plugin.cpp:196
+msgid "Remove BT Task"
+msgstr "移除行为树任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:831
+msgid "Remove BT Tasks"
+msgstr "移除行为树任务"
+
+#: editor/task_palette.cpp:263
+msgid "Remove from Favorites"
+msgstr "从收藏中移除"
+
+#: editor/limbo_ai_editor_plugin.cpp:1624
+#: editor/limbo_ai_editor_plugin.cpp:618
+msgid "Rename"
+msgstr "重命名"
+
+#: editor/limbo_ai_editor_plugin.cpp:617
+msgid "Rename Task"
+msgstr "重命名任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1920
+msgid "Resave"
+msgstr "重新保存"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:48
+msgid "Run project to start debugging."
+msgstr "运行项目以开始调试。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1702
+msgid "Save"
+msgstr "保存"
+
+#: editor/limbo_ai_editor_plugin.cpp:1637
+#: editor/limbo_ai_editor_plugin.cpp:1652
+msgid "Save Behavior Tree"
+msgstr "保存行为树"
+
+#: editor/limbo_ai_editor_plugin.cpp:1666
+msgid "Save Extracted Tree"
+msgstr "保存提取的树"
+
+#: editor/limbo_ai_editor_plugin.cpp:1646
+msgid "Save Scene"
+msgstr "保存场景"
+
+#: editor/limbo_ai_editor_plugin.cpp:1703
+msgid "Save edited behavior tree to a resource file."
+msgstr "将编辑后的行为树保存到资源文件。"
+
+#: editor/tree_search.cpp:580
+msgid "Search tree"
+msgstr "搜索树"
+
+#: compat/compat_window_wrapper.cpp:495
+msgid "Select Screen"
+msgstr "选择屏幕"
+
+#: editor/task_palette.cpp:777
+msgid "Select all categories"
+msgstr "选择所有类别"
+
+#: editor/limbo_ai_editor_plugin.cpp:1428
+msgid "Set Custom Name"
+msgstr "设置自定义名称"
+
+#: editor/editor_property_property_path.cpp:199
+msgid "Show Node in Tree"
+msgstr "在树中显示节点"
+
+#: editor/task_palette.cpp:646
+msgid "Show filters"
+msgstr "显示过滤器"
+
+#: editor/limbo_ai_editor_plugin.cpp:1321
+msgid "Show in FileSystem"
+msgstr "在文件系统中显示"
+
+#: editor/task_palette.cpp:715
+msgid "Show only core tasks"
+msgstr "只显示核心任务"
+
+#: editor/task_palette.cpp:723
+msgid "Show only user-implemented tasks (aka scripts)"
+msgstr "只显示用户实现的任务（即脚本）"
+
+#: editor/task_palette.cpp:755
+msgid "Show tasks from selected categories"
+msgstr "显示所选类别的任务"
+
+#: editor/task_palette.cpp:746
+msgid "Show tasks of all categories"
+msgstr "显示所有类别的任务"
+
+#: editor/task_palette.cpp:706
+msgid "Show tasks of all types"
+msgstr "显示所有类型的任务"
+
+#: editor/limbo_ai_editor_plugin.cpp:1484
+msgid "Task folder not found: %s"
+msgstr "未找到任务文件夹：%s"
+
+#: editor/editor_property_variable_name.cpp:95
+msgid "The %s variable in the blackboard plan should be of type %s.\nClick to open the blackboard plan."
+msgstr "黑板计划中的变量 %s 应为 %s 类型。\n点击打开黑板计划。"
+
+#: editor/limbo_ai_editor_plugin.cpp:1912
+msgid "The following BehaviorTree resources are newer on disk.\nWhat action should be taken?"
+msgstr "以下 BehaviorTree 资源在磁盘上更新。\n应采取什么操作？"
+
+#: editor/editor_property_variable_name.cpp:92
+msgid "This variable is present in the blackboard plan.\nClick to open the blackboard plan."
+msgstr "此变量存在于黑板计划中。\n点击打开黑板计划。"
+
+#: editor/editor_property_variable_name.cpp:101
+msgid "This variable is private and is not included in the blackboard plan.\nClick to open the blackboard plan."
+msgstr "此变量为私有变量，不包含在黑板计划中。\n点击打开黑板计划。"
+
+#: editor/blackboard_plan_editor.cpp:580
+#: editor/task_palette.cpp:694
+msgid "Type"
+msgstr "类型"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:249
+msgid "Update Interval:"
+msgstr "更新间隔："
+
+#: editor/task_palette.cpp:722
+msgid "User"
+msgstr "用户"
+
+#: editor/action_banner.cpp:98
+msgid "User task folder doesn't exist"
+msgstr "用户任务文件夹不存在"
+
+#: editor/blackboard_plan_editor.cpp:408
+#: editor/editor_property_variable_name.cpp:202
+msgid "Variable name"
+msgstr "变量名"
+
+#: editor/editor_property_variable_name.cpp:88
+msgid "Variable name not specified.\nClick to open the blackboard plan."
+msgstr "未指定变量名。\n点击打开黑板计划。"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:139
+msgid "Waiting for behavior tree update."
+msgstr "等待行为树更新。"
+
+#: editor/debugger/limbo_debugger_plugin.cpp:141
+msgid "Waiting for data"
+msgstr "等待数据"
+
+#: editor/limbo_ai_editor_plugin.cpp:1870
+msgid "Weight"
+msgstr "权重"
+
+#: editor/limbo_ai_editor_plugin.cpp:1733
+msgid "v"
+msgstr "v"
+
+#: editor/task_palette.cpp:675
+msgid "★ Favorites"
+msgstr "★ 收藏"
+
